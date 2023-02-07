@@ -18,10 +18,14 @@ class User{
         echo " >> email sent";
     }
 }
-$user1 = new User();
-$user1 -> userFirstName = "Jane";
+function test(){
+    $user1 = new User();
+    $user1 -> userFirstName = "Jane";
 
-$user1 -> hello() -> register() -> mail();
+    $user1 -> hello() -> register() -> mail();
+}
+
+test();
 /*
     Notez que chaque méthode à laquelle nous voulons enchaîner doit renvoyer le mot-clé $this afin de ne pas casser la chaîne. 
     Ainsi, les méthodes hello() et register() doivent renvoyer le mot-clé $this , mais il n'est pas nécessaire de renvoyer $this 
